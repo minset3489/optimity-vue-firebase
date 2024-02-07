@@ -1,0 +1,53 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.logo{
+    font-variant: small-caps;
+}
+
+*{
+    @apply font-body;
+}
+
+body{
+    @apply bg-gradient-to-tr from-mycoral via-mypink to-mypurple pb-20;
+    
+}
+
+p{
+    @apply text-base md:text-lg lg:text-xl font-medium;
+}
+
+section{
+    @apply p-4 md:p-8 max-w-screen-xl mx-auto;
+}
+
+h1{
+    @apply text-center text-4xl md:text-6xl pb-6 text-white;
+}
+
+h3{
+    @apply text-3xl md:text-5xl font-semibold;
+}
+
+h4{
+    @apply text-xl md:text-2xl font-semibold text-center md:text-left;
+}
+
+@layer components {
+    .mybutton{
+        @apply w-fit inline-block mt-4 cursor-pointer py-2 px-8 text-lg bg-gradient-to-r from-[#ff1493] to-[#ff7f50] hover:bg-gradient-to-r hover:from-[#ff1493] hover:to-[#6C3598] text-white rounded-full transition duration-200 ease-linear;  
+    }
+    
+    .bgcoralwhitepink{
+        @apply rounded-lg bg-gradient-to-tr from-orange-100 via-white to-pink-200 shadow-xl text-slate-600;
+    }
+    
+    .bgtransparent{
+        @apply rounded-md bg-[#ffffff1a] hover:bg-slate-500 bg-opacity-10 hover:bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-md;
+    }
+}
+
